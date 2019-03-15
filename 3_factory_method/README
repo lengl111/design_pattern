@@ -1,0 +1,21 @@
+抽象产品（Product）：
+	所有具体产品的父类，负责描述所有实例共有的公共接口。
+	是一个抽象类。
+	
+具体产品（real_Product）：
+	最终要创建的具体产品类，继承抽象类接口。
+
+xxxxxx工厂方法模式：像产品一样，抽象出工厂xxxxxxxxxxxxxx	
+/*
+工厂（Factory）：
+	整个模式的核心，负责实现创建所有实例的内部逻辑。
+*/
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Factory（抽象工厂）：
+	工厂方法模式的核心，与应用程序无关。
+	具体的工厂类中要实现这个接口。
+	
+具体的工厂（real_factory):
+	实现抽象工厂接口的具体工厂类，
+	包含与应用程序密切相关的逻辑，并且被应用程序调用以创建产品对象。

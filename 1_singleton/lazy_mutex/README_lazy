@@ -1,0 +1,9 @@
+懒汉单例模式 多线程存在两个问题？
+  1> 两个线程同时调用getInstance 检测m_pSingleton == NULL,有可能两次或多次
+     调用new，生成多个实例；
+  2> 在getInstance函数中调用的new 产生的对象，如果不手动调用delete会造成内存泄露。
+
+问题解决；
+	问题1> 加互斥锁(mutex)
+	问题2> 在单例类Singleton 中的public权限下定义个 GC 类，同时声明并定义一个static
+		  变量，这样在程序退出时，释放static变量会调用其析构函数，进而delete 单例对象。
